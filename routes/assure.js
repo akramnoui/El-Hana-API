@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {  getAssures,  postAssure,  updateAssure, deleteAssure, getAssureByID} = require('../queries/Assure')
+const {  getAssures,  postAssure,  updateAssure, deleteAssure, getAssureByID} = require('../queries/assure')
 
 
 //create a todo
