@@ -1,16 +1,4 @@
-# npm
-node_modules
-.env
-package-lock.json
-*.log
-*.gz
-
-# Coveralls
-.nyc_output
-coverage
-
-# Benchmarking
-benchmarks/graphs
-
-# ignore additional files using core.excludesFile
-# https://git-scm.com/docs/gitignore
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
