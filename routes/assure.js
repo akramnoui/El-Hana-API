@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const {  getOperateurs,  postOperateur,  updateOperateur, deleteOperateur, getOperateurByID} = require('../queries/operateur')
+const {  getAssures,  postAssure,  updateAssure, deleteAssure, getAssureByID} = require('../queries/Assure')
 
 
 //create a todo
 
 router.post("/", async (req, res) => {
    try {
-      postOperateur(req, res)
+      postAssure(req, res)
    } catch (error) {
 
     console.error(error.message)
@@ -15,15 +15,15 @@ router.post("/", async (req, res) => {
 
 });
 
-//get all operateurs*
+//get all Assures*
 router.get("/:id", async (req, res) => {
 
-  getOperateurByID(req, res)
+  getAssureByID(req, res)
 });
 
 router.get("/", async (req, res) => {
 
-  getOperateurs(req, res);
+  getAssures(req, res);
   
 });
 
@@ -34,14 +34,14 @@ router.get("/", async (req, res) => {
 //update a todo
 
 router.put("/:id", async (req, res) => {
-  updateOperateur(req,res);
+  updateAssure(req,res);
 
 });
 
 //delete a todo
 
 router.delete("/:id", async (req, res) => {
-  deleteOperateur(req,res)
+  deleteAssure(req,res)
  
 });
 module.exports = router;
