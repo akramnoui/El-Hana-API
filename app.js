@@ -9,6 +9,10 @@ var usersRouter = require('./routes/users');
 var operateursRouter = require('./routes/operateurs');
 var AssuresRouter = require('./routes/assure');
 var ItinerairesRouter = require('./routes/itineraire');
+var TransportssRouter = require('./routes/transport');
+var VehiculesRouter = require('./routes/vehicule');
+
+
 
 
 
@@ -29,6 +33,9 @@ app.use('/users', usersRouter);
 app.use('/operateurs', operateursRouter);
 app.use('/assures', AssuresRouter);
 app.use('/itineraire', ItinerairesRouter);
+app.use('/transport', TransportssRouter);
+app.use('/vehicule', VehiculesRouter);
+
 
 
 

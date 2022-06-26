@@ -53,12 +53,12 @@ const getItineraires = async (req, res) => {
   try {
     
     const id = req.params.id
-    const {nomfr , prenomfr , nomarabe , prenomarabe , date_naissance , numero_ss , adresse ,
-        adresse_mail , date_fin_droit } = req.body
+    const { id_operateur , id_assure ,adresse_malade , adresse_operateur , adresse_soin , distance , duree_moyenne ,
+        id_facture} = req.body
     
-    const newItineraire = await pool.query("UPDATE itineraire  SET nomfr = $1 , prenomfr = $2 ,nomarabe = $3 , prenomarabe = $4 , date_naissance = $5 , numero_ss = $6 , adresse = $7 , adresse_mail = $8  , date_fin_droit = $9 WHERE id = $10 " , 
-    [nomfr , prenomfr , nomarabe , prenomarabe , date_naissance , numero_ss , adresse ,
-     adresse_mail , date_fin_droit , id])
+    const newItineraire = await pool.query("UPDATE itineraire  SET id_operateur = $1 , id_assure = $2 ,adresse_malade = $3 , adresse_operateur = $4 , adresse_soin = $5 , distance = $6 , duree_moyenne = $7 , id_facture = $8  WHERE id = $9 " , 
+    [id_operateur , id_assure ,adresse_malade , adresse_operateur , adresse_soin , distance , duree_moyenne ,
+        id_facture , id])
  
 
       res.status(200).send(`User modified with ID: ${id}`)
